@@ -8,7 +8,7 @@ variables:
   dockerRegistryServiceConnection: "acr-cicd-connection"
   azureServiceConnection: "azure-cicd-connection"
 
-  ACR_LOGIN_SERVER: "azurecicdregistry.azurecr.io"
+  ACR_LOGIN_SERVER: "mohamedazurecicd2026.azurecr.io"
 
   imageRepository: "web-app"
   dockerfilePath: "$(Build.SourcesDirectory)/app/Dockerfile"

@@ -18,7 +18,7 @@ resource "azurerm_service_plan" "main" {
   location            = azurerm_resource_group.main.location
 
   os_type  = "Linux"
-  sku_name = "B1"
+  sku_name = "B2"
 }
 
 resource "azurerm_linux_web_app" "main" {
@@ -37,4 +37,3 @@ resource "azurerm_linux_web_app" "main" {
     }
   }
 }
-
