@@ -1,3 +1,4 @@
+
 trigger:
   - main
 
@@ -64,5 +65,4 @@ stages:
               azureSubscription: $(azureServiceConnection)
               appName: $(appName)
               containers: "$(ACR_LOGIN_SERVER)/$(imageRepository):latest"
-
 
