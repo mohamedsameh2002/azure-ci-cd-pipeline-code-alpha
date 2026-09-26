@@ -1,4 +1,3 @@
-
 trigger:
   - main
 
@@ -17,7 +16,6 @@ variables:
   appName: "webapp-azure-cicd"
 
 stages:
-
   - stage: Build
     displayName: Build and Push Docker Image
 
@@ -26,7 +24,6 @@ stages:
         displayName: Build Docker Image
 
         steps:
-
           - checkout: self
 
           - task: AzureCLI@2
@@ -58,11 +55,10 @@ stages:
         displayName: Deploy Container
 
         steps:
-
           - task: AzureWebAppContainer@1
             displayName: Deploy Container to App Service
             inputs:
               azureSubscription: $(azureServiceConnection)
               appName: $(appName)
+              resourceGroupName: "rg-azure-cicd"
               containers: "$(ACR_LOGIN_SERVER)/$(imageRepository):latest"
-
