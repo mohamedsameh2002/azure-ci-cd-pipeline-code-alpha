@@ -68,4 +68,4 @@ stages:
                 az webapp config container set \
                   --name "$(appName)" \
                   --resource-group "$(resourceGroupName)" \
-                  --container-image-name "$(ACR_LOGIN_SERVER)/$(imageRepository):latest"
+                  --container-image-name "$(ACR_LOGIN_SERVER)/$(imageRepository):$(imageTag)"
